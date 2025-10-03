@@ -1,0 +1,99 @@
+{
+    "hello": "Hello",
+    "welcome": "Welcome to my website",
+    "Introduction": {
+        "Me": {
+            "occupation": "Programmer",
+            "location": "Warsaw / Białystok, Poland",
+            "studies": "University of Warsaw, 3rd year of Computer Science at MIM UW"
+        },
+        "University": {
+            "title": "University of Warsaw",
+            "description": "3rd year of Computer Science at MIM UW"
+        },
+        "VillaMed": {
+            "title": "Villa Med Białystok",
+            "description": "IT Specialist"
+        },
+        "Github": {
+            "title": "GitHub",
+            "description": "Check out my projects on GitHub"
+        },
+        "Linkedin": {
+            "title": "LinkedIn",
+            "description": "Connect with me on LinkedIn"
+        },
+        "Email": {
+            "title": "Email",
+            "description": "lapinskikamil@o2.pl"
+        }
+    },
+    "WhoIAm": {
+        "title": "Who am I?",
+        "description": {
+            "studies": "3rd year student of Computer Science at the University of Warsaw with 6 years of experience in C++ programming.",
+            "interests": {
+                "part1": "I am particularly interested in",
+                "part2": "machine learning",
+                "part3": "and",
+                "part4": "software development"
+            }
+        },
+        "technologies": {
+            "title": "Technologies"
+        },
+        "features": {
+            "title": "My features",
+            "feature1": "Fast learning of new technologies",
+            "feature2": "Clean and readable code",
+            "feature3": "I pay attention to quality",
+            "feature4": "Good communication in the team",
+            "feature5": "I consider many solutions and choose the best"
+        }
+    },
+    "Experience": {
+        "title": "Experience and achievements",
+        "studies": {
+            "data": "oct 2023 - ",
+            "title": "Student of Computer Science at MIM UW",
+            "description": "A prestigious university where I learn a lot and develop myself."
+        },
+        "tutoring": {
+            "data": "sep 2023 - ",
+            "title": "Tutor in Computer Science and Mathematics",
+            "description": "I help high school and primary school students prepare for competitions and exams."
+        },
+        "VillaMed": {
+            "data": "jul 2022 - ",
+            "title": "IT Specialist at Villa Med Białystok",
+            "description": {
+                "part1": "In August 2025, I created a website for the Villa Med clinic, which is used by hundreds of patients.",
+                "technologies1": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Django"],
+                "part2": "In addition, I created many applications in Python to help automate processes.",
+                "technologies2": ["Python"]
+            } 
+        },
+        "ilocamps": {
+            "data": "2022 - 2023",
+            "title": "Assistant teacher in Computer Science at programming camps",
+            "description": "During the programming camps, I was explaining solutions to tasks from the Computer Science Olympiad."
+        },
+        "oi": {
+            "data": "2022 - 2023",
+            "title": "Twice advanced to the second stage of the Computer Science Olympiad",
+            "description": "4 years of studying algorithms in high school helped me gain a solid foundation in programming and problem-solving and develop logical and analytical skills."
+        }
+    },
+    "Skills": {
+        "title": "Skills",
+        "english": "English C1",
+        "german": "German A2",
+        "polish": "Polish Native"
+    },
+    "Projects": {
+        "title": "Projects"
+    },
+    "Footer": {
+        "description": "© 2025 Kamil Łapiński. All rights reserved."
+    }
+}

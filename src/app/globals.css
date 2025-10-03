@@ -15,12 +15,397 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fefefe;
+    --second: #1a677c;
   }
 }
 
 body {
+  background: var(--foreground);
+  color: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html.dark body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  @apply w-full m-0 py-0 space-y-16 md:space-y-4;
+}
+
+main > section {
+  @apply p-2 mb-20;
+}
+
+.readable {
+  @apply max-w-6xl mx-auto;
+}
+
+.prof {
+  clip-path: circle(50% at 50% 50%);
+  @apply shadow-2xl h-[25rem] sm:h-[30rem] md:h-[40rem];
+}
+
+html.dark .prof {
+  @apply shadow-2xl;
+}
+
+.quick-info {
+  text-align: center;
+}
+
+.quick-info > div, .link {
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--background);
+  border-top: 10px solid var(--background);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+html.dark .quick-info > div, html.dark .link {
+  border: 1px solid var(--foreground);
+  border-top: 10px solid var(--foreground);
+}
+
+.quick-info > div:hover, .link:hover {
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+}
+
+.quick-info > .link:hover {
+  border: 1px solid var(--second);
+  border-top: 10px solid var(--second);
+  color: var(--second);
+}
+
+.quick-info h3 {
+  font-weight: bold;
+}
+
+.option-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  @apply text-2xl md:text-4xl font-bold text-center mb-10;
+}
+
+.whoiam > div{
+  @apply flex flex-col justify-center items-center p-2 space-y-10;
+}
+
+.technologies table {
+  border-collapse: collapse;
+}
+
+.technologies tr {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  user-select: none;
+  @apply flex flex-row justify-center items-center rounded-lg;
+}
+
+.technologies tr:hover {
+  border: 1px solid var(--second);
+}
+
+.technologies tr:hover td {
+  -webkit-transform: translateX(0.5rem);
+  transform: translateX(0.5rem);
+}
+
+.technologies tr:hover td:last-child {
+  -webkit-transform: translateX(-0.5rem);
+  transform: translateX(-0.5rem);
+}
+
+.technologies td {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  @apply w-1/2;
+}
+
+.technologies td:last-child {
+  justify-content: flex-end;
+}
+
+.technologies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.technologies ul > li {
+  margin: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--second);
+  border-top: 10px solid var(--second);
+  user-select: none;
+  transition: all 0.3s ease;
+  justify-content: center;
+  text-align: center;
+  @apply rounded-lg;
+}
+
+.technologies ul > li:hover {
+  -webkit-transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem);
+  border: 1px solid var(--background);
+  border-top: 10px solid var(--background);
+}
+
+.dot {
+  fill: black;
+  margin: -0.2rem;
+}
+
+.gradient {
+  transition: all 0.3s ease;
+  opacity: 0;
+  @apply bg-gradient-to-r from-blue-500 to-purple-500;
+}
+
+.gradient.blue {
+  @apply bg-gradient-to-r from-blue-500 to-purple-500;
+}
+
+.gradient.green {
+  @apply bg-gradient-to-r from-green-500 to-orange-500;
+}
+
+.gradient.see {
+  opacity: 0.1;
+}
+
+#whoiam-gradient h3 {
+  animation: slide-left 20s linear infinite;
+}
+
+#whoiam-gradient svg {
+  animation: slide-left 20s linear infinite;
+  @apply size-60;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.experiences {
+  @apply flex flex-col;
+}
+
+.experiences > div {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  transition: all 0.5s ease;
+  @apply flex flex-col md:flex-row px-2 sm:px-4 lg:px-10 py-6 md:py-10 space-y-10 space-x-6 rounded-lg;
+}
+
+.experiences > div:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.experiences .desc {
+  transition: all 0.3s ease;
+  @apply w-full md:w-3/4 lg:w-2/3 text-center md:text-left;
+}
+
+.experiences .data {
+  transition: all 0.3s ease;
+  @apply w-full md:w-1/4 lg:w-1/3 text-xl lg:text-2xl font-bold text-center md:text-right;
+}
+
+.experiences .desc h3 {
+  @apply text-xl font-bold;
+}
+
+.experiences > div:hover .data {
+  @apply translate-y-[0.5rem] md:translate-y-0 md:translate-x-[-0.5rem] bg-[rgba(0,0,0,0.03)] md:bg-transparent rounded-lg;
+}
+
+.experiences > div:hover .desc {
+  @apply -translate-y-[0.5rem] md:translate-y-0 md:translate-x-[0.5rem];
+}
+
+.experiences > div:hover {
+  border-right: 5px solid var(--second);
+  border-left: 5px solid var(--second);
+}
+
+.experiences ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: block;
+}
+
+.experiences ul > li {
+  display: inline-block;
+  border: 1px solid var(--second);
+  user-select: none;
+  transition: all 0.3s ease;
+  @apply rounded-lg mr-2 my-1 px-2 md:px-4 py-1 whitespace-nowrap;
+}
+
+.skills {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  @apply flex flex-wrap md:flex-row justify-center py-10;
+}
+
+.skills:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.skills > div {
+  @apply flex justify-center items-center m-1;
+}
+
+.ball {
+  border-radius: 50%;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: all 0.3s ease;
+  @apply bg-gradient-to-r from-blue-500 to-purple-500 size-20 text-xl;
+}
+
+.ball.inactive {
+  transform: scale(0.9);
+  opacity: 0.4;
+}
+
+.ball:hover {
+  -webkit-transform: scale(1.1) rotate(15deg);
+  transform: scale(1.1) rotate(15deg);
+}
+
+.ball.five {
+  @apply size-32;
+}
+
+.ball.four {
+  @apply size-28;
+}
+
+.ball.three {
+  @apply size-24;
+}
+
+.ball.three {
+  @apply size-20;
+}
+
+.ball.two {
+  @apply size-16;
+}
+
+.ball.one {
+  @apply size-12;
+}
+
+.project {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  @apply my-1 w-1/2 h-50 bg-gradient-to-r from-blue-500 to-purple-500 text-3xl flex justify-center items-center font-bold text-white;
+}
+
+.project:hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+.project.soon {
+  cursor: default;
+  @apply bg-gradient-to-r from-gray-500 to-gray-400 text-gray-200;
+}
+
+.project.soon:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.project-desc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  transition: all 0.5s ease;
+  @apply flex flex-col xl:flex-row items-center py-20 px-4 md:px-10 lg:px-20;
+}
+
+.project-desc.active {
+  left: 0;
+}
+
+.project-desc > div {
+  @apply mx-5;
+}
+
+.project-desc h3 {
+  @apply text-2xl font-bold text-left;
+}
+
+.project-desc .close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  @apply text-3xl font-bold;
+}
+
+.project-desc .search {
+  display: inline-flex;
+  @apply text-3xl font-bold my-5;
+}
+
+.project-desc .search, .project-desc .close {
+  transition: all 0.3s ease;
+  color: var(--second);
+  border: 1px solid transparent;
+  @apply rounded-lg p-2 cursor-pointer;
+}
+
+.project-desc .search:hover, .project-desc .close:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+footer {
+  @apply w-full text-center py-6 rounded-t-lg;
+  border-top: 10px solid var(--second);
+  color: var(--foreground);
+  background: var(--background);
 }

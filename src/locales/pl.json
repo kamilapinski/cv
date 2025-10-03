@@ -1,0 +1,99 @@
+{
+    "hello": "Cześć",
+    "welcome": "Witamy na mojej stronie internetowej",
+    "Introduction": {
+        "Me": {
+            "occupation": "Programista",
+            "location": "Warszawa / Białystok, Polska",
+            "studies": "Uniwersytet Warszawski, 3. rok Informatyki na MIM UW"
+        },
+        "University": {
+            "title": "Uniwersytet Warszawski",
+            "description": "3. rok Informatyki na MIM UW"
+        },
+        "VillaMed": {
+            "title": "Villa Med Białystok",
+            "description": "Specjalista IT"
+        },
+        "Github": {
+            "title": "GitHub",
+            "description": "Sprawdź moje projekty na GitHubie"
+        },
+        "Linkedin": {
+            "title": "LinkedIn",
+            "description": "Zobacz mój profil na LinkedIn"
+        },
+        "Email": {
+            "title": "Email",
+            "description": "lapinskikamil@o2.pl"
+        }
+    },
+    "WhoIAm": {
+        "title": "Kim jestem?",
+        "description": {
+            "studies": "Student 3. roku Informatyki na Uniwersytecie Warszawskim z 6-letnim doświadczeniem programowania w C++.",
+            "interests": {
+                "part1": "Szczególnie interesuje mnie",
+                "part2": "uczenie maszynowe",
+                "part3": "i",
+                "part4": "software development"
+            }
+        },
+        "technologies": {
+            "title": "Technologie"
+        },
+        "features": {
+            "title": "Mocne strony",
+            "feature1": "Szybka nauka nowych technologii",
+            "feature2": "Czysty i czytelny kod",
+            "feature3": "Przywiązuję wagę do jakości",
+            "feature4": "Dobra komunikacja w zespole",
+            "feature5": "Rozważam wiele rozwiązań i wybieram najlepsze"
+        }
+    },
+    "Experience": {
+        "title": "Doświadczenie i osiągnięcia",
+        "studies": {
+            "data": "paź 2023 - ",
+            "title": "Student informatyki na MIM UW",
+            "description": "Renomowalna uczelnia, dzięki której dużo się uczę i się rozwijam."
+        },
+        "tutoring": {
+            "data": "wrz 2023 - ",
+            "title": "Korepetytor z informatyki i matematyki",
+            "description": "Pomagam uczniom szkół średnich i podstawowych w nauce do konkursów i matury."
+        },
+        "VillaMed": {
+            "data": "lip 2022 - ",
+            "title": "Specjalista IT w Villa Med Białystok",
+            "description": {
+                "part1": "W sierpniu 2025 utworzyłem stronę dla przychodni Villa Med, z której korzystają setki pacjentów.",
+                "technologies1": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Django"],
+                "part2": "Poza tym tworzyłem wiele aplikacji w pythonie pomagających w automatyzacji procesów.",
+                "technologies2": ["Python"]
+            } 
+        },
+        "ilocamps": {
+            "data": "2022 - 2023",
+            "title": "Asystent nauczycieli informatyki na obozach programistycznych",
+            "description": "Podczas obozów programistycznych omawiałem rozwiązania zadań z Olimpiady Informatycznej."
+        },
+        "oi": {
+            "data": "2022 - 2023",
+            "title": "Dwukrotny awans do II etapu Olimpiady Informatycznej",
+            "description": "4-letnia nauka algorytmiki w liceum pomogła mi zdobyć solidne podstawy w programowaniu i rozwiązywaniu problemów i rozwinąć umiejętności logiczne i analityczne."
+        }
+    },
+    "Skills": {
+        "title": "Umiejętności",
+        "english": "Angielski C1",
+        "german": "Niemiecki A2",
+        "polish": "Polski (rodzimy)"
+    },
+    "Projects": {
+        "title": "Projekty"
+    },
+    "Footer": {
+        "description": "© 2025 Kamil Łapiński. Wszelkie prawa zastrzeżone."
+    }
+}
