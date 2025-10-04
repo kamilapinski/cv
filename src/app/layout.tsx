@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
+import { ModeToggle } from "@/components/ModeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,18 +15,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kamil Łapiński - CV",
-  description: "The online CV of Kamil Łapiński, a software developer.",
+  title: "Kamil Łapiński - Korepetycje",
+  description: "Korepetycje z matematyki i informatyki - Warszawa, Białystok",
 };
 
-export default function RootLayout({
-  children,
+export default async function RootLayout({
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="pl" suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full overflow-x-hidden`}
+            >
+            <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <div className="fixed z-100 top-2 left-2 flex justify-center space-x-2">
+                  <ModeToggle />
+                </div>
+                {children}
+              </ThemeProvider>
+          </body>
+        </html>
   );
 }

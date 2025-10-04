@@ -72,12 +72,17 @@ html.dark .quick-info > div, html.dark .link {
   border-top: 10px solid var(--foreground);
 }
 
-.quick-info > div:hover, .link:hover {
+.quick-info > div:hover {
   -webkit-transform: translateY(-1rem);
   transform: translateY(-1rem);
 }
 
-.quick-info > .link:hover {
+.link:hover {
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+}
+
+.link:hover {
   border: 1px solid var(--second);
   border-top: 10px solid var(--second);
   color: var(--second);
@@ -97,36 +102,36 @@ html.dark .quick-info > div, html.dark .link {
 }
 
 h2 {
-  @apply text-2xl md:text-4xl font-bold text-center mb-10;
+  @apply text-2xl md:text-4xl font-bold text-center my-5;
 }
 
 .whoiam > div{
-  @apply flex flex-col justify-center items-center p-2 space-y-10;
+  @apply flex flex-col justify-center items-center space-y-4;
+}
+
+.whoiam > div h3 {
+  @apply text-xl font-bold;
 }
 
 .technologies table {
   border-collapse: collapse;
+  @apply w-full;
 }
 
 .technologies tr {
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid #ccc;
   user-select: none;
-  @apply flex flex-row justify-center items-center rounded-lg;
+  @apply flex flex-row justify-center items-center rounded-lg my-2;
 }
 
 .technologies tr:hover {
   border: 1px solid var(--second);
 }
 
-.technologies tr:hover td {
-  -webkit-transform: translateX(0.5rem);
-  transform: translateX(0.5rem);
-}
-
-.technologies tr:hover td:last-child {
-  -webkit-transform: translateX(-0.5rem);
-  transform: translateX(-0.5rem);
+.technologies tr:hover {
+  -webkit-transform: translateY(0.5rem);
+  transform: translateY(0.5rem);
 }
 
 .technologies td {
@@ -135,11 +140,8 @@ h2 {
   align-items: center;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
-  @apply w-1/2;
-}
-
-.technologies td:last-child {
-  justify-content: flex-end;
+  justify-content: center;
+  @apply w-full;
 }
 
 .technologies ul {
@@ -268,7 +270,17 @@ h2 {
   border: 1px solid var(--second);
   user-select: none;
   transition: all 0.3s ease;
-  @apply rounded-lg mr-2 my-1 px-2 md:px-4 py-1 whitespace-nowrap;
+  @apply rounded-lg mr-2 my-1 whitespace-nowrap;
+}
+
+.experiences ul > li:hover {
+  border: 1px solid var(--background);
+  background: var(--second);
+  color: var(--background);
+}
+
+.experiences ul > li > a {
+  @apply px-2 md:px-4 py-1;
 }
 
 .skills {
